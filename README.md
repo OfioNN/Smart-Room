@@ -7,9 +7,7 @@ The project combines **embedded programming (C++)** with a **desktop PC applicat
 
 ---
 
-## 📌 Key Features
-
-## 🖼 System in Action
+## 📸 System in Action
 
 Below are real screenshots presenting the Smart Room system in different operating states.
 
@@ -39,7 +37,7 @@ The desktop application allows real-time monitoring, manual control, and data lo
 
 ![PC Manual Mode](Documentation/images/pc_manual.png)
 
-
+## 📌 Key Features
 
 ### 🔍 Environmental Monitoring
 - Continuous measurement of:
