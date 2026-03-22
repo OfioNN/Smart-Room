@@ -1,4 +1,4 @@
-# 🏠 Smart Room
+# Smart Room
 
 Smart Room is an intelligent room monitoring and automation system based on **Arduino UNO**, designed to improve user comfort and energy efficiency.  
 The system automatically controls lighting and monitors environmental conditions such as **temperature, humidity, and light intensity**, reacting in real time with visual and audible alerts.
@@ -7,39 +7,39 @@ The project combines **embedded programming (C++)** with a **desktop PC applicat
 
 ---
 
-## 📸 System in Action
+## System in Action
 
 Below are real screenshots presenting the Smart Room system in different operating states.
 
-### 🌙 Night Mode – Automatic Lighting
+### Night Mode - Automatic Lighting
 The system automatically enables lighting during night hours based on RTC schedule.
 
 ![Night Mode](Documentation/images/night_mode.png)
 
 ---
 
-### ⚠️ Warning State
+### Warning State
 When temperature or humidity exceeds warning thresholds, the system activates visual and audible alerts.
 
 ![Warning Mode](Documentation/images/warning_mode.png)
 
 ---
 
-### 🚨 Critical State
+### Critical State
 Critical environmental conditions trigger continuous LED and buzzer alarm for maximum safety.
 
 ![Critical Mode](Documentation/images/critical_mode.png)
 
 ---
 
-### 🖥 Manual Control via PC Application
+### Manual Control via PC Application
 The desktop application allows real-time monitoring, manual control, and data logging.
 
 ![PC Manual Mode](Documentation/images/pc_manual.png)
 
-## 📌 Key Features
+## Key Features
 
-### 🔍 Environmental Monitoring
+### Environmental Monitoring
 - Continuous measurement of:
   - Temperature
   - Humidity
@@ -47,14 +47,14 @@ The desktop application allows real-time monitoring, manual control, and data lo
 - Real-time data acquisition and processing
 - Time synchronization using RTC (DS1307)
 
-### 💡 Smart Lighting Control
+### Smart Lighting Control
 - **AUTO mode**
   - Light controlled by ambient brightness (LDR)
   - Evening/night schedule based on RTC
 - **MANUAL mode**
   - User can force LED state (local buttons or PC app)
 
-### 🚨 Alarm System
+### Alarm System
 - Two-level alarm logic:
   - **WARNING**
   - **CRITICAL**
@@ -62,7 +62,7 @@ The desktop application allows real-time monitoring, manual control, and data lo
 - Visual (LED) and audible (buzzer) signaling
 - Alarm states override lighting mode (safety priority)
 
-### 🖥 Local User Interface (HMI)
+### Local User Interface (HMI)
 - OLED display (SSD1306 128×64)
 - Displays:
   - Current time
@@ -73,7 +73,7 @@ The desktop application allows real-time monitoring, manual control, and data lo
   - Manual LED control
   - Night mode configuration
 
-### 🧠 Night Mode (State Machine)
+### Night Mode (State Machine)
 - Editable night hours directly from device
 - Simple finite state machine:
   - View mode
@@ -81,7 +81,7 @@ The desktop application allows real-time monitoring, manual control, and data lo
   - Edit end hour
 - Blinking values on OLED during editing
 
-### 📡 PC Application
+### PC Application
 - Built with **Python + Tkinter**
 - Features:
   - Real-time charts (Matplotlib)
@@ -92,18 +92,18 @@ The desktop application allows real-time monitoring, manual control, and data lo
 
 ---
 
-## 🧩 System Architecture
+## System Architecture
 
-- **Arduino UNO (ATmega328P)** – data acquisition & control logic
-- **PC Application (Python)** – visualization, logging, configuration
+- **Arduino UNO (ATmega328P)** - data acquisition & control logic
+- **PC Application (Python)** - visualization, logging, configuration
 - Communication via **UART (Serial COM)**
 
 ---
 
-## 🔌 Hardware Components
+## Hardware Components
 
 - Arduino UNO (ATmega328P)
-- LDR (photoresistor – light intensity)
+- LDR (photoresistor - light intensity)
 - Simulated temperature & humidity sensors (analog inputs)
 - RTC DS1307 (I2C)
 - OLED SSD1306 (SPI)
@@ -113,7 +113,7 @@ The desktop application allows real-time monitoring, manual control, and data lo
 
 ---
 
-## 📚 Software & Libraries
+## Software & Libraries
 
 ### Arduino
 - `Adafruit_SSD1306`
@@ -131,18 +131,18 @@ The desktop application allows real-time monitoring, manual control, and data lo
 
 ---
 
-## ⚙️ Implementation Highlights
+## Implementation Highlights
 
 - Direct **GPIO register configuration** (DDRx / PORTx)
 - Non-blocking architecture using `millis()` (no `delay()`)
 - Central decision logic with safety prioritization
-- Producer–Consumer pattern in PC app (Serial thread + GUI thread)
+- Producer-Consumer pattern in PC app (Serial thread + GUI thread)
 - Dynamic sliding-window charts
 - CSV telemetry logging
 
 ---
 
-## 🧪 Testing
+## Testing
 
 - Functional testing of:
   - Alarm thresholds
@@ -154,7 +154,7 @@ The desktop application allows real-time monitoring, manual control, and data lo
 
 ---
 
-## 🚀 Possible Future Improvements
+## Possible Future Improvements
 
 - Wireless communication (ESP8266 / ESP32)
 - Cloud integration (IoT dashboards)
